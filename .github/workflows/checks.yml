@@ -1,0 +1,22 @@
+name: macOS checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-check:
+    runs-on: macos-15
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Build the native app
+        run: zsh scripts/build-app.sh
+      - name: Verify exact arithmetic and compatibility
+        run: .build/release/DucciChecks
+      - name: Verify the app signature
+        run: codesign --verify --deep --strict "dist/Ducci Lab.app"

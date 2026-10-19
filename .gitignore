@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+dist/
+qa/
+delivery/
+.DS_Store
+*.xcuserstate
+*.xcuserdata/
+.env
+.env.*
+last-experiment.json
+workspace-*-receipt.json
