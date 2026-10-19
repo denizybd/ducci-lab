@@ -284,9 +284,12 @@ struct RingView: View {
     let r = max(30, min(size.width - 110, size.height - 85) / 2)
     let cx = size.width / 2
     let cy = size.height / 2
-    return (0..<n).map {
-      let a = Double($0) * 2 * .pi / Double(n) - .pi / 2
-      return CGPoint(x: cx + r * cos(a), y: cy + r * sin(a))
+    let angleStep: Double = 2.0 * Double.pi / Double(n)
+    return (0..<n).map { index -> CGPoint in
+      let angle: Double = Double(index) * angleStep - Double.pi / 2.0
+      let x: CGFloat = cx + r * CGFloat(cos(angle))
+      let y: CGFloat = cy + r * CGFloat(sin(angle))
+      return CGPoint(x: x, y: y)
     }
   }
   var body: some View {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 — 2026-10-19
+
+- Simplify ring-coordinate expressions so the native app also compiles with the Swift toolchain on GitHub's macOS 15 runners.
+
 ## 1.1.0 — 2026-10-19
 
 - English interface, menus, presets, accessibility descriptions, validation messages, and export labels.

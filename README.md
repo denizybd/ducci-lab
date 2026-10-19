@@ -21,7 +21,7 @@ The recurrence uses signed arbitrary-precision integers. Floating point is used 
 
 The prebuilt release requires **Apple Silicon and macOS 14 or later**. It has no runtime dependencies and works offline.
 
-1. Download `Ducci-Lab-1.1.0-macOS-AppleSilicon.zip` from [Releases](https://github.com/denizybd/ducci-lab/releases).
+1. Download `Ducci-Lab-1.1.1-macOS-AppleSilicon.zip` from [Releases](https://github.com/denizybd/ducci-lab/releases).
 2. Extract the archive and move **Ducci Lab.app** to Applications.
 3. Open the app.
 
